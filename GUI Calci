@@ -1,0 +1,52 @@
+#CALCULATOR USING GUI :
+
+
+
+
+from tkinter import*
+root= Tk()
+root.geometry("1000x1000")
+root.configure(background='dark grey')
+title= Label(root, text= "TIMSU CALCULATOR", font=36, bg='black', fg='yellow')
+title.pack()
+l1= Label(root, text="enter first number")
+l1.pack()
+E1=Entry(root, width= 30)
+E1.pack()
+l2= Label(root,text="enter second number")
+l2.pack()
+E2= Entry(root, width= 30)
+E2.pack()
+l3= Label(root, text= "choose the operation to be performed")
+l3.pack()
+
+def sum():
+        a = int(E1.get())
+        b = int(E2.get())
+        l4= Label(root, text=  a + b , fg= 'yellow', bg='black', font= 20).pack()
+
+def subt():
+    a = int(E1.get())
+    b = int(E2.get())
+    l5= Label(root, text= a - b, fg = 'yellow', bg = 'black', font = 20).pack()
+
+def mult():
+    a = int(E1.get())
+    b = int(E2.get())
+    l4 = Label(root, text= a*b, fg = 'yellow', bg = 'black', font = 20).pack()
+
+def div():
+    a = int(E1.get())
+    b = int(E2.get())
+    l4 = Label(root, text= a/b, fg = 'yellow', bg = 'black', font = 20).pack()
+
+
+bt1= Button(root,text = "ADD", bg='black', fg= 'yellow', command = sum)
+bt1.pack()
+bt2 = Button(root, text="SUB",bg='black', fg= 'yellow', command= subt )
+bt2.pack()
+bt3 = Button(root, text="MULTIPLY",bg='black', fg= 'yellow', command= mult )
+bt3.pack()
+bt4 = Button(root, text="DIVIDE", bg='black', fg= 'yellow', command= div)
+bt4.pack()
+root.mainloop()
